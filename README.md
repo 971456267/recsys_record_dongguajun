@@ -14,6 +14,8 @@ ctr预估：LR,FM,FMM,gbdt,神经网络深度学习，wide & deep(google)
 
 用户画像：session
 
+nlp:embedding,ngram,cbow,skip-gram
+
 各种推荐方法的简介和适用范围：
 
 
