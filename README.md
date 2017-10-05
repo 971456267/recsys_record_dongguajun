@@ -1,12 +1,19 @@
 #Record the knowledge of the recsys
 
 问题:
+
 推荐系统和计算广告的区别，知乎上有话题
+
 ranking：pointwise,pairwise,listwise
+
 ctr预估：LR,FM,FMM,gbdt,神经网络深度学习，wide & deep(google)
+
 可解释性：
+
 评价准则：
+
 用户画像：session
+
 各种推荐方法的简介和适用范围：
 
 
