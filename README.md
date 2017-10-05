@@ -1,5 +1,7 @@
 #Record the knowledge of the recsys
-1. http://blog.csdn.net/sun_168/article/details/20637833：介绍矩阵分解在推荐系统中的使用
+
+#1.介绍矩阵分解在推荐系统中的使用 
+#http://blog.csdn.net/sun_168/article/details/20637833：
 
 简介:矩阵分解目标就是把用户-项目评分矩阵R分解成用户因子矩阵和项目因子矩阵乘的形式，
 即R=UV，这里R是n×m， n =6， m =7，U是n×k，V是k×m；用户i对项目j的评分r_ij =innerproduct(u_i, v_j)，更一般的情况是r_ij =f(U_i, V_j)
