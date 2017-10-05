@@ -1,5 +1,15 @@
 #Record the knowledge of the recsys
 
+问题:
+推荐系统和计算广告的区别，知乎上有话题
+ranking：pointwise,pairwise,listwise
+ctr预估：LR,FM,FMM,gbdt,神经网络深度学习，wide & deep(google)
+可解释性：
+评价准则：
+用户画像：session
+各种推荐方法的简介和适用范围：
+
+
 推荐系统基本任务就是联系用户和物品，解决信息过载问题，推荐系统通过挖掘用户行为，找到用户个性化需求，从而将长尾商品准确地推荐给需要它的用户，主要方法有：社会化推荐(基于人口统计学推荐)，基于内容推荐，基于协同过滤推荐以及混合推荐。协同过滤又可进一步分成基于内存的推荐(基于领域的方法)和基于模型的推荐。
 
 协同过滤：item_CF,user_CF,LFM(隐语义模型，LSI,pLSA,LDA,Topic Model);
