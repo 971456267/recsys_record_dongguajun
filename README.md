@@ -87,3 +87,22 @@ c)设置固定迭代次数
 #4.矩阵分解在协同过滤推荐算法中的应用#http://www.cnblogs.com/pinard/p/6351319.html
 
 本文介绍了三种用于矩阵分解的算法，分别为FunkSVD,BaisSVD,SVD++,第三篇文章介绍的矩阵分解的方法实际上就是FunkSVD,矩阵分解适合小型推荐系统。
+
+#ctr预估相关
+
+相关术语：
+CPC:cost per click,每次点击花费
+CPA:cost per action,按广告投放效果收费
+CVR:click value rate,转化率
+CTR:click through rate,点击率
+PV, page view, 访问量
+....
+
+预估CTR/CVR，业界常用的方法有人工特征工程 + LR(Logistic Regression)、GBDT(Gradient Boosting Decision Tree) + LR[1][2][3]、FM（Factorization Machine）[2][7]和FFM（Field-aware Factorization Machine）[9]模型。在这些模型中，FM和FFM近年来表现突出，分别在由Criteo和Avazu举办的CTR预测竞赛中夺得冠军[4][5]。随着深度学习的发展，使用深度学习的方法预估ctr也逐渐发展(http://www.mamicode.com/info-detail-1465813.html，wide & deep(google),DeepCross(residual network))。
+
+
+#5.深入理解FFM原理与实践#http://geek.csdn.net/news/detail/59793
+
+FM(Factorization Machine)是由Konstanz大学Steffen Rendle（现任职于Google）于2010年最早提出的，旨在解决稀疏数据下的特征组合问题。根据model-based的协同过滤中，一个rating矩阵能够分解为user矩阵和item矩阵，FM将特征组合的权重矩阵W分解W = VTV的形式，优化方式也与MF的训练相同，使用als或者是sgd。
+
+FFM(Field-aware Factorization Machine)最初的概念来自Yu-Chin Juan（阮毓钦，毕业于中国台湾大学，现在美国Criteo(Criteo是一家在纳斯达克上市的全球性的效果营销的科技公司,于2005年在法国巴黎成立。该公司目前的核心业务是重定向广告）与其比赛队员，是他们借鉴了来自Michael Jahrer的论文中的field概念提出了FM的升级版模型。通过引入field的概念，FFM把相同性质的特征归于同一个field。
