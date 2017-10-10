@@ -2,7 +2,11 @@
 
 问题:
 
-推荐系统和计算广告的区别，知乎上有话题
+推荐系统背景
+
+推荐基本算法介绍
+
+推荐系统架构
 
 ranking：pointwise,pairwise,listwise
 
@@ -14,8 +18,7 @@ ctr预估：LR,FM,FMM,gbdt,神经网络深度学习，wide & deep(google),DeepCr
 
 用户画像：session
 
-nlp:embedding,ngram,cbow,skip-gram
-
+nlp:embedding,ngram,cbow,skip-gram,word2vec
 
 
 推荐系统基本任务就是联系用户和物品，解决信息过载问题，推荐系统通过挖掘用户行为，找到用户个性化需求，从而将长尾商品准确地推荐给需要它的用户，主要方法有：社会化推荐(基于人口统计学推荐)，基于内容推荐，基于协同过滤推荐以及混合推荐。协同过滤又可进一步分成基于内存的推荐(基于领域的方法)和基于模型的推荐。
@@ -109,4 +112,13 @@ PV, page view, 访问量
 
 FM(Factorization Machine)是由Konstanz大学Steffen Rendle（现任职于Google）于2010年最早提出的，旨在解决稀疏数据下的特征组合问题。根据model-based的协同过滤中，一个rating矩阵能够分解为user矩阵和item矩阵，FM将特征组合的权重矩阵W分解W = VTV的形式，优化方式也与MF的训练相同，使用als或者是sgd。
 
-FFM(Field-aware Factorization Machine)最初的概念来自Yu-Chin Juan（阮毓钦，毕业于中国台湾大学，现在美国Criteo(Criteo是一家在纳斯达克上市的全球性的效果营销的科技公司,于2005年在法国巴黎成立。该公司目前的核心业务是重定向广告）与其比赛队员，是他们借鉴了来自Michael Jahrer的论文中的field概念提出了FM的升级版模型。通过引入field的概念，FFM把相同性质的特征归于同一个field。
+FFM(Field-aware Factorization Machine)最初的概念来自Yu-Chin Juan（阮毓钦，毕业于中国台湾大学，现在美国Criteo(Criteo是一家在纳斯达克上市的全球性的效果营销的科技公司,于2005年在法国巴黎成立。该公司目前的核心业务是重定向广告）与其比赛队员，是他们借鉴了来自Michael Jahrer的论文中的field概念提出了FM的升级版模型。通过引入field的概念，FFM把相同性质的特征归于同一个field。github上源码地址https://github.com/guestwalk/libffm，下载,保证gcc版本大于4.2.2,make即可，会生成fft-train和fft-predict,libffm源码解析可以参考链接http://blog.csdn.net/zc02051126/article/details/54614230。
+
+#6.用户画像#https://www.zhihu.com/question/26758348
+
+用户画像又称用户角色，作为一种勾画目标用户、联系用户诉求与设计方向的有效工具，用户画像在各领域得到了广泛的应用。主要有两种用户画像User Persiona 和User Profile.
+
+User Persiona:主要面向产品设计人员和运营人员，例如，在用户调研阶段，产品经理经过调查问卷、客户访谈了解用户的共性与差异，汇总成不同的虚拟用户；在产品原型设计、开发阶段，产品经理围绕这些虚拟用户的需求、场景，研究设计产品用户体验与使用流程；当产品设计出现分歧时，产品经理能够借助用户画像（User Persona）跳出离散的需求，聚焦到目标用户，不是再讨论这个功能到底要不要保留，而是讨论用户可能需要这个功能，如何使用这个功能等等。当产品用户群体扩大后，单纯靠User Persona效果便有所局限。所以就会用到User Profile.
+
+User Profile:为了解决上述问题，同时为了更加精细化的深入理解用户，我们自然会希望通过产品积累的用户行为数据来为产品运营提供更好的支持，由此诞生了一些新的功能，例如根据用户的浏览记录向用户提供个性化行为数据。User Profile就是根据用户在产品中的行为数据，产出描述用户标签的集合。例如猜测用户的性别，生活所在地，喜欢什么明星，要买什么东西,时间，是否节假日，是否新用户，留存和召回的考虑，用户兴趣变化快慢等。
+
