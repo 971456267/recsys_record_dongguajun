@@ -27,6 +27,10 @@ nlp:embedding,ngram,cbow,skip-gram
 
 下面是一些参考链接:
 
+#第四范式程晓澄:机器学习如何优化系统#https://mp.weixin.qq.com/s?__biz=MzI1MjQ2OTQ3Ng==&mid=2247486257&idx=1&sn=5302911cb3f22ed56dcf7d655aadea51&chksm=e9e202bade958bacadd1800f3c465c24f7534f5499d79a276acb3c4b1a5061de0c5c2863ac03&mpshare=1&scene=1&srcid=1010FOkRazP4kH2exOpUQdsS&pass_ticket=Kgcwh2pgE0pgjJq7GHdbx3i%2B4xsh0LkxdXwx98oemfr886I3%2F8gthuYxfH6FYMq1#rd
+本文介绍了推荐系统发展的历史，算法的演进，以及最新的技术的介绍，包括整个推荐系统框架的介绍（候选集的生成，排序，重排序以及生成推荐列表），十分全面的科普帖。
+
+
 #1.常用推荐算法简介,http://blog.csdn.net/u014605728/article/details/51274814
 
 本文介绍了各种推荐方法的简介和适用范围
